@@ -119,6 +119,6 @@ func _on_Cowboy_disparo():
 	if $Conteo.tiempo > 0:
 		_sad()
 
-func _process(delta):
+func _process(delta): #Si apretás esc, el juego se resetea
 	if Input.is_action_just_pressed("ui_cancel"):
 		_ready()
