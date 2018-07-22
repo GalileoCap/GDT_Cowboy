@@ -1,0 +1,365 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Main.gd" type="Script" id=1]
+[ext_resource path="res://UI.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Conteo.gd" type="Script" id=3]
+[ext_resource path="res://Cowboy.tscn" type="PackedScene" id=4]
+[ext_resource path="res://HappyCowboy.tscn" type="PackedScene" id=5]
+[ext_resource path="res://SadCowboy.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Go.tscn" type="PackedScene" id=7]
+
+[node name="Main" type="Node" index="0"]
+
+script = ExtResource( 1 )
+
+[node name="UI" parent="." index="0" instance=ExtResource( 2 )]
+
+[node name="BotonDeAndroid_col" type="ColorRect" parent="." index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 922.0
+margin_top = 557.0
+margin_right = 1255.0
+margin_bottom = 695.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 1, 0.461884, 0.105469, 1 )
+_sections_unfolded = [ "Margin" ]
+
+[node name="BotonDeAndroid" type="TextureButton" parent="." index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 0.0
+margin_left = 922.0
+margin_top = 557.0
+margin_right = -24.0
+margin_bottom = 692.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+action_mode = 0
+enabled_focus_mode = 2
+shortcut = null
+group = null
+_sections_unfolded = [ "Margin" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="StartButton" type="Button" parent="." index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 384.0
+margin_top = 620.0
+margin_right = 896.0
+margin_bottom = 90.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Inciar"
+flat = false
+align = 1
+_sections_unfolded = [ "Margin" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="SadRestartButton" type="Button" parent="." index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 384.0
+margin_top = 620.0
+margin_right = 896.0
+margin_bottom = 90.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "¡Perdiste! ¿Qerés intentar de nuevo?"
+flat = false
+align = 1
+_sections_unfolded = [ "Margin" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="HappyRestartButton" type="Button" parent="." index="5"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 384.0
+margin_top = 620.0
+margin_right = 896.0
+margin_bottom = 90.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "¡Ganaste! A segir ganando"
+flat = false
+align = 1
+_sections_unfolded = [ "Margin" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="TimerJugando" type="Timer" parent="." index="6"]
+
+process_mode = 1
+wait_time = 0.01
+one_shot = false
+autostart = false
+
+[node name="TimerPerder" type="Timer" parent="." index="7"]
+
+process_mode = 1
+wait_time = 0.01
+one_shot = false
+autostart = false
+
+[node name="ParaDisparar" type="Label" parent="." index="8"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 979.0
+margin_top = 613.0
+margin_right = 1195.0
+margin_bottom = 627.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Para disparar en Android, click aqí"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Instrucciones" type="Label" parent="." index="9"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 379.0
+margin_top = 334.0
+margin_right = 890.0
+margin_bottom = 399.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Para preparar tu disparo mantené apretada la tecla enter, y soltala para disparar.
+En el celular, usá el botón de abajo a la derecha como si fuera la tecla enter
+
+Esperá al \"Go\" antes de disparar"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Conteo" type="Label" parent="." index="10"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1209.0
+margin_top = 16.0
+margin_right = 1249.0
+margin_bottom = 30.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+script = ExtResource( 3 )
+
+[node name="Listo" type="Label" parent="." index="11"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 180.0
+margin_top = 219.0
+margin_right = 231.0
+margin_bottom = 233.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Preparado..."
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Preparado" type="Label" parent="." index="12"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 180.0
+margin_top = 219.0
+margin_right = 256.0
+margin_bottom = 233.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Listo..."
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Apurado" type="Label" parent="." index="13"]
+
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -31.0
+margin_top = -7.0
+margin_right = 30.0
+margin_bottom = 7.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "¡Apurado!"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Perdi" type="Label" parent="." index="14"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 609.0
+margin_top = 353.0
+margin_right = 649.0
+margin_bottom = 367.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "¡Perdiste!"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Cowboy" parent="." index="15" instance=ExtResource( 4 )]
+
+position = Vector2( 213, 406.196 )
+
+[node name="HappyCowboy" parent="." index="16" instance=ExtResource( 5 )]
+
+position = Vector2( 213, 406.196 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="SadCowboy" parent="." index="17" instance=ExtResource( 6 )]
+
+position = Vector2( 213, 406.196 )
+
+[node name="Go" parent="." index="18" instance=ExtResource( 7 )]
+
+position = Vector2( 640, 370 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[connection signal="restart" from="." to="Conteo" method="_on_Main_restart"]
+
+[connection signal="button_down" from="BotonDeAndroid" to="Cowboy" method="_on_TextureButton_button_down"]
+
+[connection signal="button_up" from="BotonDeAndroid" to="Cowboy" method="_on_TextureButton_button_up"]
+
+[connection signal="pressed" from="StartButton" to="." method="_on_StartButton_pressed"]
+
+[connection signal="pressed" from="SadRestartButton" to="." method="_on_SadRestartButton_pressed"]
+
+[connection signal="pressed" from="HappyRestartButton" to="." method="_on_HappyRestartButton_pressed"]
+
+[connection signal="timeout" from="TimerJugando" to="." method="_on_TimerJugando_timeout"]
+
+[connection signal="timeout" from="TimerPerder" to="." method="_on_TimerPerder_timeout"]
+
+[connection signal="go" from="Conteo" to="." method="_on_Conteo_go"]
+
+[connection signal="lose" from="Conteo" to="." method="_on_Conteo_lose"]
+
+[connection signal="disparo" from="Cowboy" to="." method="_on_Cowboy_disparo"]
+
+[connection signal="preparado" from="Cowboy" to="." method="_on_Cowboy_preparado"]
+
+
