@@ -11,7 +11,7 @@ func _process(delta):
 	text = str(tiempo, "\n", pierde)
 
 	if tiempo <= 0 and cuento == 1:
-		pierde = rand_range(0.009, 1)
+		pierde = rand_range(0.009, 0.5)
 		cuento = 0
 		emit_signal("go")
 
